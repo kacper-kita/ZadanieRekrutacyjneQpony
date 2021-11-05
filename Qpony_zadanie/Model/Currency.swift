@@ -16,6 +16,6 @@ struct Currencies: Decodable {
 struct Currency: Decodable {
     let table: String?
     let no: String?
-    let effectiveDate: Date?
+    let effectiveDate: String?
     let rates: [Currencies]?
 }

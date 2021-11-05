@@ -12,8 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NetworkManager.shared.getCurrencies(table: "A") { (currencies) in
+            guard let currencies = currencies else {
+                return
+            }
+            print("Currency: \(currencies[1])")
+        }
     }
-
-
 }
 
