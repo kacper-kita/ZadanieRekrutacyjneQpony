@@ -35,7 +35,19 @@
                             <constraint firstItem="WGk-pT-oa4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tG0-3X-5qW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Table A" id="NRk-bo-pxg"/>
+                    <navigationItem key="navigationItem" title="Table A" id="NRk-bo-pxg">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZK9-Ui-0cK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7od-NM-1gY">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reload"/>
+                                <connections>
+                                    <action selector="didTapReload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mJw-VQ-vrn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="WGk-pT-oa4" id="arh-M3-HlS"/>
                     </connections>
@@ -71,7 +83,21 @@
                             <constraint firstAttribute="bottom" secondItem="ZcD-nt-1Gt" secondAttribute="bottom" id="ux8-Of-vua"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Table B" id="ccs-7S-ZFp"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Table B" id="ccs-7S-ZFp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="PaK-TX-Cz7">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kjn-2Z-xjF">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reload"/>
+                                <connections>
+                                    <action selector="didTapReload:" destination="xBe-LF-fXZ" eventType="touchUpInside" id="WjS-2e-f6h"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ZcD-nt-1Gt" id="MDw-Dz-MQh"/>
                     </connections>
@@ -164,7 +190,19 @@
                             <constraint firstItem="9v4-cL-Sh7" firstAttribute="top" secondItem="5XO-i6-yaD" secondAttribute="top" id="x7m-Bx-vJH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Table C" id="x9f-KB-YOL"/>
+                    <navigationItem key="navigationItem" title="Table C" id="x9f-KB-YOL">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ALa-A6-tM6">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QHB-e0-DLS">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reload"/>
+                                <connections>
+                                    <action selector="didTapReload:" destination="UvZ-Jc-4L3" eventType="touchUpInside" id="RBS-t2-bPP"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="9v4-cL-Sh7" id="C5a-Mg-zQ6"/>
                     </connections>

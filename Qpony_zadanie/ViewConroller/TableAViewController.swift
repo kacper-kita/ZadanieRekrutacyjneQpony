@@ -34,6 +34,9 @@ class TableAViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    @IBAction func didTapReload(_ sender: UIButton) {
+        getCurrency()
+    }
 }
 
 extension TableAViewController: UITableViewDelegate, UITableViewDataSource {
