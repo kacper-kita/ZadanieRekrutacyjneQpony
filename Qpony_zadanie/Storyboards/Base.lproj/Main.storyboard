@@ -72,6 +72,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table B" id="ccs-7S-ZFp"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZcD-nt-1Gt" id="MDw-Dz-MQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6e-II-92R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +165,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table C" id="x9f-KB-YOL"/>
+                    <connections>
+                        <outlet property="tableView" destination="9v4-cL-Sh7" id="C5a-Mg-zQ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKk-Md-Rrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

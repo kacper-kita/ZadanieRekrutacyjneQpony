@@ -11,6 +11,7 @@ struct Currencies: Decodable {
     let currency: String?
     let code: String?
     let mid: Double?
+    let bid: Double?
 }
 
 struct Currency: Decodable {

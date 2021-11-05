@@ -21,4 +21,8 @@ struct CurrencyViewModel {
     var mid: Double {
         return currencies.mid ?? 0.0
     }
+    
+    var bid: Double {
+        return currencies.bid ?? 0.0
+    }
 }

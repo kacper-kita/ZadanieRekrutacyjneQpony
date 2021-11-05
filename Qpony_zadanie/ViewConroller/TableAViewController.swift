@@ -19,11 +19,13 @@ class TableAViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCurrency()
-        
+        setupTableView()
+    }
+    
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 80
-       
         tableView.register(UINib(nibName: tableViewCellName, bundle: nil), forCellReuseIdentifier: tableViewCellName)
     }
     
