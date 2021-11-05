@@ -13,6 +13,8 @@
 		3651E25427353AEE00DCB2EC /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3651E25327353AEE00DCB2EC /* CurrencyListViewModel.swift */; };
 		3651E25627355BA700DCB2EC /* TableBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3651E25527355BA700DCB2EC /* TableBViewController.swift */; };
 		3651E25927355BB800DCB2EC /* TableCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3651E25827355BB800DCB2EC /* TableCViewController.swift */; };
+		3651E25D2735631B00DCB2EC /* CustomMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3651E25B2735631B00DCB2EC /* CustomMainViewCell.swift */; };
+		3651E25E2735631B00DCB2EC /* CustomMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3651E25C2735631B00DCB2EC /* CustomMainViewCell.xib */; };
 		36F2BBC82734599E00EB5265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2BBC72734599E00EB5265 /* AppDelegate.swift */; };
 		36F2BBCA2734599E00EB5265 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2BBC92734599E00EB5265 /* SceneDelegate.swift */; };
 		36F2BBCC2734599E00EB5265 /* TableAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2BBCB2734599E00EB5265 /* TableAViewController.swift */; };
@@ -28,6 +30,8 @@
 		3651E25327353AEE00DCB2EC /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
 		3651E25527355BA700DCB2EC /* TableBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBViewController.swift; sourceTree = "<group>"; };
 		3651E25827355BB800DCB2EC /* TableCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCViewController.swift; sourceTree = "<group>"; };
+		3651E25B2735631B00DCB2EC /* CustomMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainViewCell.swift; sourceTree = "<group>"; };
+		3651E25C2735631B00DCB2EC /* CustomMainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMainViewCell.xib; sourceTree = "<group>"; };
 		36F2BBC42734599E00EB5265 /* Qpony_zadanie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qpony_zadanie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F2BBC72734599E00EB5265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36F2BBC92734599E00EB5265 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 				3651E24D2735290D00DCB2EC /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3651E25A273562F600DCB2EC /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				3651E25B2735631B00DCB2EC /* CustomMainViewCell.swift */,
+				3651E25C2735631B00DCB2EC /* CustomMainViewCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		36F2BBBB2734599E00EB5265 = {
@@ -93,6 +106,7 @@
 		36F2BBDB27345B7500EB5265 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3651E25A273562F600DCB2EC /* CustomCells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +207,7 @@
 			files = (
 				36F2BBD4273459A200EB5265 /* LaunchScreen.storyboard in Resources */,
 				36F2BBD1273459A200EB5265 /* Assets.xcassets in Resources */,
+				3651E25E2735631B00DCB2EC /* CustomMainViewCell.xib in Resources */,
 				36F2BBCF2734599E00EB5265 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +227,7 @@
 				3651E25927355BB800DCB2EC /* TableCViewController.swift in Sources */,
 				36F2BBCA2734599E00EB5265 /* SceneDelegate.swift in Sources */,
 				3651E25627355BA700DCB2EC /* TableBViewController.swift in Sources */,
+				3651E25D2735631B00DCB2EC /* CustomMainViewCell.swift in Sources */,
 				3651E25427353AEE00DCB2EC /* CurrencyListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

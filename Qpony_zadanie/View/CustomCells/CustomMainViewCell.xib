@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomMainViewCell" rowHeight="71" id="KGk-i7-Jjw" customClass="CustomMainViewCell" customModule="Qpony_zadanie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UR-Ff-tf0">
+                        <rect key="frame" x="11" y="6" width="146" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd7-CI-gpp">
+                        <rect key="frame" x="157.5" y="23.5" width="48" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfu-YR-WL8">
+                        <rect key="frame" x="310" y="6" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMw-dD-35L">
+                        <rect key="frame" x="307" y="46" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="tMw-dD-35L" secondAttribute="bottom" constant="7" id="HXE-5h-Qkz"/>
+                    <constraint firstItem="Yd7-CI-gpp" firstAttribute="leading" secondItem="8UR-Ff-tf0" secondAttribute="trailing" constant="0.5" id="MR0-pg-eve"/>
+                    <constraint firstItem="8UR-Ff-tf0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="O0l-ZO-pAf"/>
+                    <constraint firstItem="8UR-Ff-tf0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="brG-Gf-zFO"/>
+                    <constraint firstItem="pfu-YR-WL8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="dVR-KW-914"/>
+                    <constraint firstAttribute="trailing" secondItem="pfu-YR-WL8" secondAttribute="trailing" constant="20" symbolic="YES" id="fzl-4A-cze"/>
+                    <constraint firstAttribute="trailing" secondItem="tMw-dD-35L" secondAttribute="trailing" constant="18" id="jR3-fB-HOy"/>
+                    <constraint firstItem="Yd7-CI-gpp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kvK-oA-FUj"/>
+                    <constraint firstItem="Yd7-CI-gpp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xTP-DV-CiG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="codeLabel" destination="tMw-dD-35L" id="fmR-PZ-xQL"/>
+                <outlet property="dateLabel" destination="pfu-YR-WL8" id="Ccj-nm-qUv"/>
+                <outlet property="exchangeLabel" destination="Yd7-CI-gpp" id="hjC-eM-ts8"/>
+                <outlet property="nameLabel" destination="8UR-Ff-tf0" id="oef-40-moH"/>
+            </connections>
+            <point key="canvasLocation" x="163.04347826086959" y="138.95089285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

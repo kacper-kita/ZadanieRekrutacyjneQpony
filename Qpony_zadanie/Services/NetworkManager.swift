@@ -7,9 +7,10 @@
 
 import Foundation
 
-class NetworkManager {
+final class NetworkManager {
     
     static let shared = NetworkManager()
+    lazy var dateCurrency = "Unknown"
     
     func createURL(path: String) -> URL {
         var components = URLComponents()
@@ -27,7 +28,7 @@ class NetworkManager {
         return url
     }
     
-    func getCurrencies(table: String, completion: @escaping ([Currency]?) -> Void) {
+    func getCurrencies(table: String, completion: @escaping ([Currencies]?) -> Void) {
         let path = "/api/exchangerates/tables/\(table)/"
         
         let url = createURL(path: path)
@@ -39,7 +40,8 @@ class NetworkManager {
             }
             
             let currencies = try? JSONDecoder().decode([Currency].self, from: data)
-            currencies == nil ? completion(nil) : completion(currencies)
+            self.dateCurrency = currencies?.first?.effectiveDate ?? "Unknown"
+            currencies == nil ? completion(nil) : completion(currencies?.first?.rates)
         }.resume()
     }
 }
