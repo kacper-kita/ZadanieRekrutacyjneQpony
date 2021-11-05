@@ -30,8 +30,12 @@ class TableAViewController: UIViewController {
     }
     
     private func getCurrency() {
-        viewModel.getCurrency(table: "A") { (_) in
-            self.tableView.reloadData()
+        self.startActivityIndicator()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.viewModel.getCurrency(table: "A") { (_) in
+                self.tableView.reloadData()
+                self.stopActivityIndicator()
+            }
         }
     }
     @IBAction func didTapReload(_ sender: UIButton) {

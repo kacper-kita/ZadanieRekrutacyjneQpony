@@ -30,8 +30,12 @@ class TableCViewController: UIViewController {
     }
     
     private func getCurrency() {
-        viewModel.getCurrency(table: "C") { (_) in
-            self.tableView.reloadData()
+        self.startActivityIndicator()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.viewModel.getCurrency(table: "C") { (_) in
+                self.tableView.reloadData()
+                self.stopActivityIndicator()
+            }
         }
     }
     
