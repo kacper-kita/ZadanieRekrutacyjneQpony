@@ -104,7 +104,7 @@
         <scene sceneID="aZ2-a0-VJt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rw6-i7-WEY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table A" id="XbN-bx-E4D"/>
+                    <tabBarItem key="tabBarItem" title="Table A" image="dollarsign.square" catalog="system" id="XbN-bx-E4D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G8H-o1-iWj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -123,7 +123,7 @@
         <scene sceneID="oI2-1U-UmP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uI4-2w-wqi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table B" id="O6s-oS-p6s"/>
+                    <tabBarItem key="tabBarItem" title="Table B" image="dollarsign.square" catalog="system" id="O6s-oS-p6s"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uw3-k7-1Dg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -177,7 +177,7 @@
         <scene sceneID="Ojv-HU-eW8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LTx-DL-bjQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table C" id="J2J-AD-7FA"/>
+                    <tabBarItem key="tabBarItem" title="Table C" image="dollarsign.square" catalog="system" id="J2J-AD-7FA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gyn-nU-6Jb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -194,6 +194,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
