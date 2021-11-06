@@ -44,4 +44,8 @@ final class NetworkManager {
             currencies == nil ? completion(nil) : completion(currencies?.first?.rates)
         }.resume()
     }
+    
+    func getCurrencyDetail(table: String, code: String, startDate: String, endDate: String, completion: @escaping () -> Void) {
+        
+    }
 }
