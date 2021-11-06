@@ -27,6 +27,8 @@ class CurrencyDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = name
         setupTableView()
+        let calendar = Date()
+        print(calendar)
     }
     
     private func getDatePicker() {
@@ -57,6 +59,8 @@ class CurrencyDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func didTapReload(_ sender: UIButton) {
+        startDate.setDate(Date(), animated: false)
+        endDate.setDate(Date(), animated: false)
         if !tableView.visibleCells.isEmpty {
             getCurrency()
         }
