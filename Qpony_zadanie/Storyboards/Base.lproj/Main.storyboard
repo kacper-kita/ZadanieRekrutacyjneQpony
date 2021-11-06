@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rYW-eZ-g4b">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableAViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WGk-pT-oa4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="x0H-a7-XOp"/>
@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" title="Table A" id="NRk-bo-pxg">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ZK9-Ui-0cK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7od-NM-1gY">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <rect key="frame" x="282" y="4.6666666666666679" width="92" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reload"/>
@@ -62,11 +62,11 @@
             <objects>
                 <viewController id="xBe-LF-fXZ" customClass="TableBViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VSD-Hs-6XR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZcD-nt-1Gt">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
                                 <connections>
@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Table B" id="ccs-7S-ZFp">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="PaK-TX-Cz7">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kjn-2Z-xjF">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <rect key="frame" x="282" y="4.6666666666666679" width="92" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reload"/>
@@ -111,18 +111,102 @@
         <!--Currency Detail View Controller-->
         <scene sceneID="SY5-yd-FOW">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="QgA-2G-WB0" customClass="CurrencyDetailViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" hidesBottomBarWhenPushed="YES" id="QgA-2G-WB0" customClass="CurrencyDetailViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JXJ-VY-neI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="PHJ-Mf-ADL">
+                                <rect key="frame" x="30" y="112" width="101" height="88.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-bt-ebY">
+                                        <rect key="frame" x="11.666666666666664" y="0.0" width="77.666666666666686" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="M6m-aU-I28">
+                                        <rect key="frame" x="0.0" y="38" width="101" height="50"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="bDA-Kd-WSC">
+                                <rect key="frame" x="259" y="112" width="101" height="88.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t5-vF-bdU">
+                                        <rect key="frame" x="16" y="0.0" width="69.333333333333329" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-JE-f7l">
+                                        <rect key="frame" x="0.0" y="38.333333333333343" width="101" height="50"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHR-Th-Qv3">
+                                <rect key="frame" x="30" y="220.33333333333334" width="330" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="OK"/>
+                                <connections>
+                                    <action selector="didTapOK:" destination="QgA-2G-WB0" eventType="touchUpInside" id="3dJ-Ne-I2W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Rates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIG-6o-XSP">
+                                <rect key="frame" x="112.66666666666667" y="266.33333333333331" width="164.66666666666663" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ycE-zE-GhK">
+                                <rect key="frame" x="0.0" y="306.33333333333331" width="390" height="537.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QgA-2G-WB0" id="kvI-03-HQW"/>
+                                    <outlet property="delegate" destination="QgA-2G-WB0" id="Jf8-xY-qgM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J0Q-Lz-EZY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ycE-zE-GhK" firstAttribute="trailing" secondItem="J0Q-Lz-EZY" secondAttribute="trailing" id="5JU-8e-9pS"/>
+                            <constraint firstItem="sIG-6o-XSP" firstAttribute="top" secondItem="uHR-Th-Qv3" secondAttribute="bottom" constant="15" id="755-i9-mhv"/>
+                            <constraint firstItem="J0Q-Lz-EZY" firstAttribute="trailing" secondItem="uHR-Th-Qv3" secondAttribute="trailing" constant="30" id="7gu-hr-8aL"/>
+                            <constraint firstItem="bDA-Kd-WSC" firstAttribute="top" secondItem="J0Q-Lz-EZY" secondAttribute="top" constant="24" id="Alz-Nr-O8e"/>
+                            <constraint firstItem="sIG-6o-XSP" firstAttribute="centerX" secondItem="JXJ-VY-neI" secondAttribute="centerX" id="FuQ-qU-gh5"/>
+                            <constraint firstItem="ycE-zE-GhK" firstAttribute="top" secondItem="sIG-6o-XSP" secondAttribute="bottom" constant="10" id="M7k-Wr-gEO"/>
+                            <constraint firstItem="J0Q-Lz-EZY" firstAttribute="trailing" secondItem="bDA-Kd-WSC" secondAttribute="trailing" constant="30" id="Sir-vN-mWT"/>
+                            <constraint firstItem="PHJ-Mf-ADL" firstAttribute="top" secondItem="J0Q-Lz-EZY" secondAttribute="top" constant="24" id="Wjm-hI-s6d"/>
+                            <constraint firstItem="ycE-zE-GhK" firstAttribute="leading" secondItem="J0Q-Lz-EZY" secondAttribute="leading" id="YLl-58-GcY"/>
+                            <constraint firstAttribute="bottom" secondItem="ycE-zE-GhK" secondAttribute="bottom" id="aNR-oC-AVO"/>
+                            <constraint firstItem="PHJ-Mf-ADL" firstAttribute="leading" secondItem="J0Q-Lz-EZY" secondAttribute="leading" constant="30" id="kzC-Fh-g1U"/>
+                            <constraint firstItem="uHR-Th-Qv3" firstAttribute="top" secondItem="PHJ-Mf-ADL" secondAttribute="bottom" constant="20" id="ot9-1l-uNv"/>
+                            <constraint firstItem="uHR-Th-Qv3" firstAttribute="leading" secondItem="J0Q-Lz-EZY" secondAttribute="leading" constant="30" id="uSH-2A-NFV"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CrC-xQ-Grp"/>
+                    <navigationItem key="navigationItem" id="CrC-xQ-Grp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="iY4-AC-7YH">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ra6-TD-QU3">
+                                <rect key="frame" x="288" y="5" width="86" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reload"/>
+                                <connections>
+                                    <action selector="didTapReload:" destination="QgA-2G-WB0" eventType="touchUpInside" id="vbl-hs-cZY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="endDate" destination="ezk-JE-f7l" id="SV7-c0-URV"/>
+                        <outlet property="startDate" destination="M6m-aU-I28" id="Dh4-G1-hYf"/>
+                        <outlet property="tableView" destination="ycE-zE-GhK" id="kJm-uf-G1z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzL-pV-ppB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="2594"/>
+            <point key="canvasLocation" x="461.53846153846155" y="2593.3649289099526"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vMB-re-0FS">
@@ -152,7 +236,7 @@
                     <tabBarItem key="tabBarItem" title="Table A" image="dollarsign.square" catalog="system" id="XbN-bx-E4D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G8H-o1-iWj">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -171,7 +255,7 @@
                     <tabBarItem key="tabBarItem" title="Table B" image="dollarsign.square" catalog="system" id="O6s-oS-p6s"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uw3-k7-1Dg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -188,11 +272,11 @@
             <objects>
                 <viewController id="UvZ-Jc-4L3" customClass="TableCViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wap-NL-F71">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9v4-cL-Sh7">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="UvZ-Jc-4L3" id="TTI-LO-Kr9"/>
@@ -212,7 +296,7 @@
                     <navigationItem key="navigationItem" title="Table C" id="x9f-KB-YOL">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ALa-A6-tM6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QHB-e0-DLS">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <rect key="frame" x="282" y="4.6666666666666679" width="92" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reload"/>
@@ -238,7 +322,7 @@
                     <tabBarItem key="tabBarItem" title="Table C" image="dollarsign.square" catalog="system" id="J2J-AD-7FA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gyn-nU-6Jb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -252,7 +336,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sVk-NT-R2x"/>
+        <segue reference="k34-PW-JSb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="dollarsign.square" catalog="system" width="128" height="114"/>
