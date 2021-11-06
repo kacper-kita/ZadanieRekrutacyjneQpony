@@ -50,6 +50,8 @@ final class NetworkManager {
         
         let url = createURL(path: path)
         
+        print("URL: \(url)")
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data else {
                 completion(nil)
