@@ -31,16 +31,19 @@ class TableAViewController: UIViewController {
     
     private func getCurrency() {
         self.startActivityIndicator()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.viewModel.getCurrency(table: "A") { (_) in
                 self.tableView.reloadData()
                 self.stopActivityIndicator()
             }
         }
     }
+    
     @IBAction func didTapReload(_ sender: UIButton) {
         getCurrency()
     }
+    
+    
 }
 
 extension TableAViewController: UITableViewDelegate, UITableViewDataSource {
@@ -60,9 +63,13 @@ extension TableAViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        performSegue(withIdentifier: "tableASegue", sender: cell)
+        let data = viewModel.currencyVM[indexPath.row]
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? CurrencyDetailViewController {
+            detailViewController.table = "A"
+            detailViewController.name = data.currency
+            detailViewController.code = data.code
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }

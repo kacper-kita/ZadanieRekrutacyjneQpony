@@ -31,7 +31,7 @@ class TableBViewController: UIViewController {
     
     private func getCurrency() {
         self.startActivityIndicator()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.viewModel.getCurrency(table: "B") { (_) in
                 self.tableView.reloadData()
                 self.stopActivityIndicator()
@@ -61,9 +61,13 @@ extension TableBViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        performSegue(withIdentifier: "tableBSegue", sender: cell)
+        let data = viewModel.currencyVM[indexPath.row]
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? CurrencyDetailViewController {
+            detailViewController.table = "B"
+            detailViewController.name = data.currency
+            detailViewController.code = data.code
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }
