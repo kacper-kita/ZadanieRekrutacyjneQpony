@@ -45,7 +45,19 @@ final class NetworkManager {
         }.resume()
     }
     
-    func getCurrencyDetail(table: String, code: String, startDate: String, endDate: String, completion: @escaping () -> Void) {
+    func getCurrencyDetail(table: String, code: String, startDate: String, endDate: String, completion: @escaping ([CurrencyRates]?) -> Void) {
+        let path = "/api/exchangerates/rates/\(table)/\(code)/\(startDate)/\(endDate)/"
         
+        let url = createURL(path: path)
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard error == nil, let data = data else {
+                completion(nil)
+                return
+            }
+            
+            let detail = try? JSONDecoder().decode(CurrencyDetail.self, from: data)
+            detail == nil ? completion(nil) : completion(detail?.rates)
+        }.resume()
     }
 }
