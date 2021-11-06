@@ -1,5 +1,5 @@
 //
-//  TableCViewController.swift
+//  TableBViewController.swift
 //  Qpony_zadanie
 //
 //  Created by Kacper Kita on 05/11/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableCViewController: UIViewController {
+class TableBViewController: UIViewController {
     
     var viewModel = CurrencyListViewModel()
     let tableViewCellName = "CustomMainViewCell"
@@ -32,7 +32,7 @@ class TableCViewController: UIViewController {
     private func getCurrency() {
         self.startActivityIndicator()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.viewModel.getCurrency(table: "C") { (_) in
+            self.viewModel.getCurrency(table: "B") { (_) in
                 self.tableView.reloadData()
                 self.stopActivityIndicator()
             }
@@ -44,7 +44,7 @@ class TableCViewController: UIViewController {
     }
 }
 
-extension TableCViewController: UITableViewDelegate, UITableViewDataSource {
+extension TableBViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.currencyVM.count
     }
@@ -55,8 +55,15 @@ extension TableCViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = items.currency
         cell.codeLabel.text = items.code
         cell.dateLabel.text = NetworkManager.shared.dateCurrency
-        cell.exchangeLabel.text = String(items.bid)
+        cell.exchangeLabel.text = String(items.mid)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "tableBSegue", sender: cell)
     }
 }

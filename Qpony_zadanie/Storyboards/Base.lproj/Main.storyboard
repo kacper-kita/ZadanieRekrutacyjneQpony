@@ -50,6 +50,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="WGk-pT-oa4" id="arh-M3-HlS"/>
+                        <segue destination="QgA-2G-WB0" kind="show" identifier="tableASegue" id="k34-PW-JSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,11 +101,28 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ZcD-nt-1Gt" id="MDw-Dz-MQh"/>
+                        <segue destination="QgA-2G-WB0" kind="show" identifier="tableBSegue" id="sVk-NT-R2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6e-II-92R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453.62318840579712" y="1733.7053571428571"/>
+        </scene>
+        <!--Currency Detail View Controller-->
+        <scene sceneID="SY5-yd-FOW">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="QgA-2G-WB0" customClass="CurrencyDetailViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JXJ-VY-neI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J0Q-Lz-EZY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CrC-xQ-Grp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzL-pV-ppB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="2594"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vMB-re-0FS">
@@ -113,6 +131,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="s0u-2D-EeR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l0D-wg-rj9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -205,6 +224,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="9v4-cL-Sh7" id="C5a-Mg-zQ6"/>
+                        <segue destination="QgA-2G-WB0" kind="show" identifier="tableCSegue" id="yYV-Zd-Q1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKk-Md-Rrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -231,6 +251,9 @@
             <point key="canvasLocation" x="1339" y="935"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sVk-NT-R2x"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="dollarsign.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">

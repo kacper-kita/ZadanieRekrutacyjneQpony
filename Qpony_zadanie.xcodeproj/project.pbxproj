@@ -16,6 +16,7 @@
 		3651E25D2735631B00DCB2EC /* CustomMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3651E25B2735631B00DCB2EC /* CustomMainViewCell.swift */; };
 		3651E25E2735631B00DCB2EC /* CustomMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3651E25C2735631B00DCB2EC /* CustomMainViewCell.xib */; };
 		366CA2302735997A001AFD8D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366CA22F2735997A001AFD8D /* ActivityIndicator.swift */; };
+		367B47DB2736972F00A6BFB7 /* CurrencyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B47DA2736972F00A6BFB7 /* CurrencyDetailViewController.swift */; };
 		36F2BBC82734599E00EB5265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2BBC72734599E00EB5265 /* AppDelegate.swift */; };
 		36F2BBCA2734599E00EB5265 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2BBC92734599E00EB5265 /* SceneDelegate.swift */; };
 		36F2BBCC2734599E00EB5265 /* TableAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2BBCB2734599E00EB5265 /* TableAViewController.swift */; };
@@ -34,6 +35,7 @@
 		3651E25B2735631B00DCB2EC /* CustomMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainViewCell.swift; sourceTree = "<group>"; };
 		3651E25C2735631B00DCB2EC /* CustomMainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMainViewCell.xib; sourceTree = "<group>"; };
 		366CA22F2735997A001AFD8D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		367B47DA2736972F00A6BFB7 /* CurrencyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailViewController.swift; sourceTree = "<group>"; };
 		36F2BBC42734599E00EB5265 /* Qpony_zadanie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qpony_zadanie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F2BBC72734599E00EB5265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36F2BBC92734599E00EB5265 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,24 @@
 				3651E25C2735631B00DCB2EC /* CustomMainViewCell.xib */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		367B47D8273696F100A6BFB7 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				36F2BBCB2734599E00EB5265 /* TableAViewController.swift */,
+				3651E25527355BA700DCB2EC /* TableBViewController.swift */,
+				3651E25827355BB800DCB2EC /* TableCViewController.swift */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		367B47D92736970B00A6BFB7 /* CurrentyDetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				367B47DA2736972F00A6BFB7 /* CurrencyDetailViewController.swift */,
+			);
+			path = CurrentyDetailViewControllers;
 			sourceTree = "<group>";
 		};
 		36F2BBBB2734599E00EB5265 = {
@@ -134,9 +154,8 @@
 		36F2BBDE27345B8D00EB5265 /* ViewConroller */ = {
 			isa = PBXGroup;
 			children = (
-				36F2BBCB2734599E00EB5265 /* TableAViewController.swift */,
-				3651E25527355BA700DCB2EC /* TableBViewController.swift */,
-				3651E25827355BB800DCB2EC /* TableCViewController.swift */,
+				367B47D92736970B00A6BFB7 /* CurrentyDetailViewControllers */,
+				367B47D8273696F100A6BFB7 /* MainViewControllers */,
 			);
 			path = ViewConroller;
 			sourceTree = "<group>";
@@ -224,6 +243,7 @@
 			files = (
 				3651E24E2735290D00DCB2EC /* NetworkManager.swift in Sources */,
 				3651E2522735396500DCB2EC /* CurrencyViewModel.swift in Sources */,
+				367B47DB2736972F00A6BFB7 /* CurrencyDetailViewController.swift in Sources */,
 				3651E25027352C6800DCB2EC /* Currency.swift in Sources */,
 				36F2BBCC2734599E00EB5265 /* TableAViewController.swift in Sources */,
 				36F2BBC82734599E00EB5265 /* AppDelegate.swift in Sources */,
