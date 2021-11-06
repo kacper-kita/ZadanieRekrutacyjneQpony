@@ -27,8 +27,7 @@ class CurrencyDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = name
         setupTableView()
-        let calendar = Date()
-        print(calendar)
+        
     }
     
     private func getDatePicker() {
@@ -48,12 +47,29 @@ class CurrencyDetailViewController: UIViewController {
     private func getCurrency() {
         getDatePicker()
         self.startActivityIndicator()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.viewModel.getDetails(table: self.table, code: self.code, startDate: self.startDateString, endDate: self.endDateString) { (_) in
                 self.tableView.reloadData()
                 self.stopActivityIndicator()
             }
         }
+    }
+    
+    private func validateDifferenceBetweenDays() -> Bool{
+        let calendar = Calendar.current
+
+        let date1 = calendar.startOfDay(for: startDate.date)
+        let date2 = calendar.startOfDay(for: endDate.date)
+
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        
+        guard let days = components.day else {return false}
+        
+        if (days > 367 || days <= 0 || endDate.date > Date()) {
+            return false
+        }
+        
+        return true
     }
     
     //MARK: - Actions
@@ -62,12 +78,20 @@ class CurrencyDetailViewController: UIViewController {
         startDate.setDate(Date(), animated: false)
         endDate.setDate(Date(), animated: false)
         if !tableView.visibleCells.isEmpty {
-            getCurrency()
+            if validateDifferenceBetweenDays() {
+                getCurrency()
+            }else{
+                showAlert()
+            }
         }
     }
 
     @IBAction func didTapOK(_ sender: UIButton) {
-        getCurrency()
+        if validateDifferenceBetweenDays() {
+            getCurrency()
+        }else{
+            showAlert()
+        }
     }
 }
 

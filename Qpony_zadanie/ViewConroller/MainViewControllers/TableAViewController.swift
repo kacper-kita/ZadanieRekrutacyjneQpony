@@ -31,7 +31,7 @@ class TableAViewController: UIViewController {
     
     private func getCurrency() {
         self.startActivityIndicator()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.viewModel.getCurrency(table: "A") { (_) in
                 self.tableView.reloadData()
                 self.stopActivityIndicator()
