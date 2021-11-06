@@ -61,9 +61,12 @@ extension TableCViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        performSegue(withIdentifier: "tableCSegue", sender: cell)
+        let data = viewModel.currencyVM[indexPath.row]
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? CurrencyDetailViewController {
+            detailViewController.name = data.currency
+            detailViewController.code = data.code
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }

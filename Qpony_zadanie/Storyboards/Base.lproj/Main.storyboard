@@ -111,7 +111,7 @@
         <!--Currency Detail View Controller-->
         <scene sceneID="SY5-yd-FOW">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="QgA-2G-WB0" customClass="CurrencyDetailViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" hidesBottomBarWhenPushed="YES" id="QgA-2G-WB0" customClass="CurrencyDetailViewController" customModule="Qpony_zadanie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JXJ-VY-neI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
