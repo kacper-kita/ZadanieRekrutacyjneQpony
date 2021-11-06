@@ -11,6 +11,7 @@ struct CurrencyRates: Decodable {
     let no: String?
     let effectiveDate: String?
     let mid: Double?
+    let bid: Double?
 }
 
 struct CurrencyDetail: Decodable {

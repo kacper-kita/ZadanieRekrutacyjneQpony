@@ -19,7 +19,6 @@ class DetailListViewModel {
             let detailVM = details.map(DetailViewModel.init)
             DispatchQueue.main.async {
                 self.detailVM = detailVM
-                print(detailVM)
                 completion(detailVM)
             }
         }

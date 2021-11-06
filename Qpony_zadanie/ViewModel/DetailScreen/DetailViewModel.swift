@@ -21,4 +21,8 @@ struct DetailViewModel {
     var mid: Double {
         return details.mid ?? 0.0
     }
+    
+    var bid: Double {
+        return details.bid ?? 0.0
+    }
 }

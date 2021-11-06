@@ -15,6 +15,7 @@ class CurrencyDetailViewController: UIViewController {
     @IBOutlet weak var endDate: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     
+    var table = ""
     var name = ""
     var code = ""
     var startDateString = ""
@@ -46,7 +47,7 @@ class CurrencyDetailViewController: UIViewController {
         getDatePicker()
         self.startActivityIndicator()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.viewModel.getDetails(table: "A", code: self.code, startDate: self.startDateString, endDate: self.endDateString) { (_) in
+            self.viewModel.getDetails(table: self.table, code: self.code, startDate: self.startDateString, endDate: self.endDateString) { (_) in
                 self.tableView.reloadData()
                 self.stopActivityIndicator()
             }
@@ -78,7 +79,11 @@ extension CurrencyDetailViewController: UITableViewDelegate, UITableViewDataSour
         let items = viewModel.detailVM[indexPath.row]
         
         cell.dateLabel.text = items.effectiveDate
-        cell.rateLabel.text = String(items.mid)
+        if table == "C" {
+            cell.rateLabel.text = String(items.bid)
+        }else {
+            cell.rateLabel.text = String(items.mid)
+        }
         
         return cell
     } 

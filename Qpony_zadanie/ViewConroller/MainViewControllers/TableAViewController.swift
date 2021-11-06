@@ -66,6 +66,7 @@ extension TableAViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let data = viewModel.currencyVM[indexPath.row]
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? CurrencyDetailViewController {
+            detailViewController.table = "A"
             detailViewController.name = data.currency
             detailViewController.code = data.code
             self.navigationController?.pushViewController(detailViewController, animated: true)
