@@ -12,6 +12,8 @@ final class NetworkManager {
     static let shared = NetworkManager()
     lazy var dateCurrency = "Unknown"
     
+    //MARK: - Functions
+    
     func createURL(path: String) -> URL {
         var components = URLComponents()
         
