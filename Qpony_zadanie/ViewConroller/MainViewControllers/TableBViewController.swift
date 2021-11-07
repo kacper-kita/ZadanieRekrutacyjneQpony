@@ -9,8 +9,8 @@ import UIKit
 
 class TableBViewController: UIViewController {
     
-    var viewModel = CurrencyListViewModel()
-    let tableViewCellName = "CustomMainViewCell"
+    var viewModel = CurrencyListViewModel() // Variable to provide access to viewmodel
+    let tableViewCellName = "CustomMainViewCell" // Variable for save cell identifier
     
     //MARK: - Outlets
     
@@ -64,6 +64,8 @@ extension TableBViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let data = viewModel.currencyVM[indexPath.row]
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? CurrencyDetailViewController {
+            
+            // Pass data to CurrencyDetailViewController
             detailViewController.table = "B"
             detailViewController.name = data.currency
             detailViewController.code = data.code

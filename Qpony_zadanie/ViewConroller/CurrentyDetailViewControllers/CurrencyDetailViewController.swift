@@ -15,13 +15,16 @@ class CurrencyDetailViewController: UIViewController {
     @IBOutlet weak var endDate: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     
-    var table = ""
-    var name = ""
-    var code = ""
-    var startDateString = ""
-    var endDateString = ""
-    let tableViewCellName = "DetailTableViewCell"
-    var viewModel = DetailListViewModel()
+    //MARK: - Variable and Constant
+    
+    
+    var table = "" // Variable to save table name from previous ViewController
+    var name = "" // Variable to save currency name from previous ViewController
+    var code = "" // Variable to save currency code from previous ViewController
+    var startDateString = "" // Variable for save date from datePicker in String type
+    var endDateString = "" // Variable for save date from datePicker in String type
+    let tableViewCellName = "DetailTableViewCell" // Variable for save cell identifier
+    var viewModel = DetailListViewModel() // Variable to provide access to viewmodel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,8 @@ class CurrencyDetailViewController: UIViewController {
         setupTableView()
         
     }
+    
+    //MARK: - Private
     
     private func getDatePicker() {
         let dateFormater = DateFormatter()
@@ -46,15 +51,16 @@ class CurrencyDetailViewController: UIViewController {
     
     private func getCurrency() {
         getDatePicker()
-        self.startActivityIndicator()
+        self.startActivityIndicator() // Enable activity indicator when downloading data from API
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.viewModel.getDetails(table: self.table, code: self.code, startDate: self.startDateString, endDate: self.endDateString) { (_) in
                 self.tableView.reloadData()
-                self.stopActivityIndicator()
+                self.stopActivityIndicator() // Stop activity indicator when data has been downloaded
             }
         }
     }
     
+    // Function to check if the range selected by the user is appropriate and the API does not return an error
     private func validateDifferenceBetweenDays() -> Bool{
         let calendar = Calendar.current
 
@@ -107,6 +113,8 @@ extension CurrencyDetailViewController: UITableViewDelegate, UITableViewDataSour
         let items = viewModel.detailVM[indexPath.row]
         
         cell.dateLabel.text = items.effectiveDate
+        
+        // A condition that assigns different values to table C because it has no min parameter
         if table == "C" {
             cell.rateLabel.text = String(items.bid)
         }else {
